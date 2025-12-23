@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number Checker | Go & JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔢 Cek Bilangan Armstrong</h1>
+        <p>Masukkan sebuah angka untuk melihat apakah ia merupakan Bilangan Armstrong, sekaligus membandingkan kinerja metode Iteratif dan Rekursif.</p>
+
+        <form id="form">
+            <div class="input-group">
+                <label for="number">Angka:</label>
+                <input type="number" id="number" placeholder="Contoh: 153" required min="0">
+            </div>
+
+            <div class="input-group">
+                <label for="method">Metode Pengecekan:</label>
+                <select id="method">
+                    <option value="iterative">✨ Iteratif (Loop)</option>
+                    <option value="recursive">🔄 Rekursif (Panggilan Diri)</option>
+                </select>
+            </div>
+            
+            <button type="submit" id="check-btn">Cek Sekarang</button>
+        </form>
+
+        <div id="result-container" class="hidden">
+            <hr>
+            <h2>Hasil:</h2>
+            <div id="result-text"></div>
+            <div id="performance-metrics">
+                <div class="metric">
+                    <span>⏱️ Waktu Eksekusi:</span>
+                    <span id="time-output">...</span>
+                </div>
+                <div class="metric">
+                    <span>🧠 Penggunaan Memori:</span>
+                    <span id="memory-output">...</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="error-message" class="error hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
